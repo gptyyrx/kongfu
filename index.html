@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="探索中国功夫的历史、文化与精神内涵">
+    <title>中国功夫 - 武术之道</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #c9302c;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #c9302c;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-left: 5px solid #c9302c;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #2a5298;
+            font-size: 1.6em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+            font-size: 1.1em;
+        }
+
+        .intro {
+            font-size: 1.2em;
+            color: #555;
+            text-align: justify;
+        }
+
+        .styles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .style-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 12px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .style-card h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .style-card p {
+            text-indent: 0;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .principles {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 12px;
+            color: white;
+            margin-top: 25px;
+        }
+
+        .principles h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .principles ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .principles li {
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1.1em;
+            backdrop-filter: blur(10px);
+        }
+
+        .principles li:before {
+            content: "⚡ ";
+            margin-right: 10px;
+        }
+
+        .quote {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #c9302c;
+            font-style: italic;
+            font-size: 1.3em;
+            color: #333;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote cite {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+            font-style: normal;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            margin-top: 30px;
+            color: #666;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            color: #c9302c;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                letter-spacing: 3px;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            .styles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>中国功夫</h1>
+            <p class="subtitle">千年武术，东方智慧</p>
+        </header>
+
+        <div class="content-section">
+            <h2>功夫简介</h2>
+            <p class="intro">
+                中国功夫，又称中国武术，是中华民族在漫长的历史进程中不断创造、发展和传承的优秀文化遗产。它不仅是一种防身技艺，更是一门融合了哲学、医学、美学的综合性艺术。功夫讲究<span class="highlight">内外兼修</span>，既强调身体的锻炼，也注重精神的修养。
+            </p>
+            <p class="intro">
+                从少林寺的硬功到武当山的内家拳，从南方的咏春拳到北方的长拳，中国功夫流派众多，各具特色。每一种功夫都蕴含着深厚的文化底蕴和独特的技击理念。习练功夫不仅能强健体魄，更能培养坚韧不拔的意志和高尚的武德。
+            </p>
+        </div>
+
+        <div class="quote">
+            "练武之人，当以德为先，技为辅。武德高尚，方能成就真正的武者。"
+            <cite>— 武术谚语</cite>
+        </div>
+
+        <div class="content-section">
+            <h2>主要流派</h2>
+            <div class="styles-grid">
+                <div class="style-card">
+                    <h3>少林功夫</h3>
+                    <p>起源于嵩山少林寺，以刚猛有力著称。少林功夫注重外家功法，强调力量和速度的结合，其套路繁多，包括罗汉拳、龙爪手、铁砂掌等，是中国武术的代表之一。</p>
+                </div>
+                <div class="style-card">
+                    <h3>太极拳</h3>
+                    <p>以柔克刚的内家拳法，强调阴阳平衡、以静制动。太极拳动作舒缓流畅，讲究气沉丹田，通过缓慢的动作和深沉的呼吸达到修身养性、强身健体的目的。</p>
+                </div>
+                <div class="style-card">
+                    <h3>咏春拳</h3>
+                    <p>南派拳术的代表，以快速连续的直线攻击为特点。咏春拳讲究"来留去送，甩手直冲"，注重中线理论和寸劲发力，是实战性极强的武术流派。</p>
+                </div>
+                <div class="style-card">
+                    <h3>形意拳</h3>
+                    <p>模仿动物形态和动作的拳法，包括龙、虎、熊、猴、马五种基本形态。形意拳讲究意念引导，形神合一，动作简洁直接，刚猛有力。</p>
+                </div>
+                <div class="style-card">
+                    <h3>八卦掌</h3>
+                    <p>以走圈和掌法变化为特色的内家拳。八卦掌讲究身法灵活，步法走转如行云流水，掌法变化莫测，是集养生与技击于一体的高深武学。</p>
+                </div>
+                <div class="style-card">
+                    <h3>武当剑</h3>
+                    <p>武当派的剑术，以轻灵飘逸、刚柔并济著称。武当剑法讲究剑随身走，身剑合一，动作优美飘逸，蕴含深厚的道家哲学思想。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>功夫精神</h2>
+            <p>
+                中国功夫不仅仅是技击之术，更是一种修身养性的方式。习武者讲究<span class="highlight">"习武先修德"</span>，强调武德的重要性。真正的武者应当具备仁义之心，不恃强凌弱，不欺善怕恶。
+            </p>
+
+            <div class="principles">
+                <h3>武术修炼的核心原则</h3>
+                <ul>
+                    <li><strong>尊师重道</strong> - 尊重师长，传承武术精神</li>
+                    <li><strong>刻苦训练</strong> - 冬练三九，夏练三伏</li>
+                    <li><strong>内外兼修</strong> - 练拳不练功，到老一场空</li>
+                    <li><strong>以武会友</strong> - 切磋技艺，共同进步</li>
+                    <li><strong>强身健体</strong> - 修身养性，延年益寿</li>
+                    <li><strong>见义勇为</strong> - 路见不平，拔刀相助</li>
+                </ul>
+            </div>
+
+            <p>
+                功夫的修炼是一个持续终生的过程，需要持之以恒的毅力和刻苦的训练。正所谓<span class="highlight">"拳不离手，曲不离口"</span>，只有通过日复一日的练习，才能真正领悟功夫的精髓，达到身心合一的境界。
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>功夫与文化</h2>
+            <p>
+                中国功夫深深植根于中华传统文化，与儒、道、佛三家思想密切相关。儒家强调仁义礼智信，道家讲究天人合一、阴阳平衡，佛家倡导慈悲为怀、自我修行。这些哲学思想都深刻影响了功夫的发展和传承。
+            </p>
+            <p>
+                功夫也是中国传统文化向世界传播的重要载体。从李小龙到成龙，从《卧虎藏龙》到《功夫熊猫》，中国功夫通过电影等艺术形式影响了全世界，成为世界了解中国文化的重要窗口。今天，在世界各地都有人在学习和传承中国功夫，这项古老的艺术正在焕发新的生机。
+            </p>
+        </div>
+
+        <footer>
+            <p>中国功夫 - 传承千年的东方武术艺术</p>
+            <p>© 2024 Chinese Kung Fu Heritage</p>
+        </footer>
+    </div>
+</body>
+</html>
